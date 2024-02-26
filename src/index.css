@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #f2f3f5;
+}
+
+.slick-slide > div {
+  margin: 0 5px;
+}
+.slick-list {
+  margin: 0 -5px;
+}
+
+.banner-catalog:hover .banner-catalog-btn {
+  background-color: #0047b6;
+  transition: all;
+}
+
+.information:hover .information-btn {
+  color: #0059e4;
+  transition: all;
+}
