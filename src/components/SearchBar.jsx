@@ -1,7 +1,7 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
-import axios from "axios";
+import axios from "redaxios";
 import { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
 import { Link } from "react-router-dom";
