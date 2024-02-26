@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "redaxios";
 import React, { useState } from "react";
 
 const Register = () => {

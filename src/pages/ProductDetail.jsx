@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "redaxios";
 import { PiHeartStraightBold, PiHeartStraightFill } from "react-icons/pi";
 import { FaArrowRight } from "react-icons/fa";
 import ProductDetailAccordion from "../components/ProductDetailAccordion";
