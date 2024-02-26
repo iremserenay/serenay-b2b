@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 const TripleBanner = () => {
   var settings = {
@@ -72,7 +73,7 @@ const TripleBanner = () => {
         </div>
       </div>
       <div className="md:hidden">
-        <a href="" className="bg-white text-customBlue p-10 inline-block">
+        <Link to="" className="bg-white text-customBlue p-10 inline-block">
           <h1 className="text-2xl font-bold uppercase ">
             bİtkİ bazlı ve vegan
           </h1>
@@ -91,7 +92,7 @@ const TripleBanner = () => {
           <div className="bg-customLightBlue text-white font-bold text-lg text-center mt-5 p-3 w-full">
             Daha Fazlasını İncele
           </div>
-        </a>
+        </Link>
         <Slider {...settings}>
           <a
             href="/"

@@ -1,5 +1,6 @@
 import axios from "redaxios";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [data, setData] = useState({
@@ -34,13 +35,13 @@ const Login = () => {
 
   return (
     <div className="flex flex-col items-center mt-5">
-      <a href="/">
+      <Link to="/">
         <img
           src="https://placehold.co/600x400"
           alt=""
           className="bg-customBlue p-2 w-[200px] md:w-[300px] object-cover"
         />
-      </a>
+      </Link>
       <div className="bg-white p-6 w-[300px] md:w-[600px] mt-10 shadow-md rounded-sm">
         <p className="text-customBlue font-bold text-lg text-center">
           Oturum Aç
@@ -108,9 +109,9 @@ const Login = () => {
           </div>
         </form>
       </div>
-      <a href="/register" className="mt-3 text-customBlue ">
+      <Link to="/register" className="mt-3 text-customBlue ">
         Şimdi Üye Ol
-      </a>
+      </Link>
     </div>
   );
 };

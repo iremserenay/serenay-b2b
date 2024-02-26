@@ -1,5 +1,6 @@
 import axios from "redaxios";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [data, setData] = useState({
@@ -46,13 +47,13 @@ const Register = () => {
 
   return (
     <div className="flex flex-col items-center mt-5">
-      <a href="/">
+      <Link to="/">
         <img
           src="https://placehold.co/600x400"
           alt=""
           className="bg-customBlue p-2 w-[200px] md:w-[300px] object-cover"
         />
-      </a>
+      </Link>
       <div className="bg-white p-6 w-[300px] md:w-[600px] mt-10 shadow-md rounded-sm">
         <p className="text-customBlue font-bold text-lg text-center">
           Kayıt Ol

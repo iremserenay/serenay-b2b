@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   var settings = {
@@ -29,7 +30,7 @@ const Services = () => {
 
       <Slider {...settings}>
         <div className="bg-white hover:shadow-lg transition-shadow">
-          <a href="/">
+          <Link to="/">
             <img
               className="w-full h-[150px] md:h-[250px] object-cover"
               src="https://cdn.metro-online.com/-/media/Project/MCW/TR_Metro/anasayfa/MetroFastMobilUygulamaMetroFast464x232px.jpg?rev=e619f7d2b2a540d0b0a8cffba7844e9b&w=464&webp=1&hash=A0E6DBD89710EFF24A5781AF5890AC32"
@@ -47,7 +48,7 @@ const Services = () => {
                 hızlı ve daha güvenli alışverişle deneyimiyle tanışın.
               </p>
             </div>
-          </a>
+          </Link>
         </div>
         <div className="bg-white hover:shadow-lg transition-shadow">
           <a>

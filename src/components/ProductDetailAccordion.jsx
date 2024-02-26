@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ProductDetailAccordion = ({ title, answers }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
@@ -53,7 +54,7 @@ const ProductDetailAccordion = ({ title, answers }) => {
           <ul>
             {answers.map((answer, id) => (
               <li className="text-customBlue mb-3 text-xs" key={id}>
-                <a href="/">{answer}</a>
+                <Link to="/">{answer}</Link>
               </li>
             ))}
           </ul>
