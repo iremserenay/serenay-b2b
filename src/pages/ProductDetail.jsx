@@ -7,6 +7,8 @@ import { MdAddShoppingCart } from "react-icons/md";
 import Modal from "../components/Modal";
 import { useParams } from "react-router-dom";
 
+const apiKey = import.meta.env.VITE_BASE_URL;
+
 const ProductDetail = () => {
   const [cartItems, setCartItems] = useState([]);
   function addToCart(product) {
@@ -17,7 +19,7 @@ const ProductDetail = () => {
   const [productData, setProductData] = useState([]);
   useEffect(() => {
     axios
-      .get(`https://shop.orient.at/sermobileboss/get_product/${userId}`)
+      .get(`${apiKey}/get_product/${userId}`)
       .then((response) => {
         const data = response.data;
         setProductData(data);

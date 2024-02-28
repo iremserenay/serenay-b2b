@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 import axios from "redaxios";
 import { Link } from "react-router-dom";
 
+const apiKey = import.meta.env.VITE_BASE_URL;
+
 const Dropdown = () => {
   const [categoryData, setCategoryData] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://shop.orient.at/sermobileboss/get_sub_categories/1")
+      .get(`${apiKey}/get_sub_categories/1`)
       .then((response) => {
         const data = response.data.sub_categories;
         setCategoryData(data);

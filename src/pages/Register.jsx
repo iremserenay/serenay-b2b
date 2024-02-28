@@ -2,6 +2,8 @@ import axios from "redaxios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+const apiKey = import.meta.env.VITE_BASE_URL;
+
 const Register = () => {
   const [data, setData] = useState({
     name: "",
@@ -36,7 +38,7 @@ const Register = () => {
     };
     console.log(userData);
     axios
-      .post("https://shop.orient.at/sermobileboss/register", userData, {
+      .post(`${apiKey}/register`, userData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then((response) => {

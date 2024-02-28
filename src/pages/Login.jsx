@@ -2,6 +2,8 @@ import axios from "redaxios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+const apiKey = import.meta.env.VITE_BASE_URL;
+
 const Login = () => {
   const [data, setData] = useState({
     email: "",
@@ -24,11 +26,11 @@ const Login = () => {
     };
     console.log(userData);
     axios
-      .post("https://shop.orient.at/sermobileboss/login", userData, {
+      .post(`${apiKey}/login`, userData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then((response) => {
-        console.log(response.status, response.data.apiKey);
+        console.log(response);
       })
       .catch((error) => console.log(error));
   };

@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 import ProductCardButtons from "./ProductCardButtons";
 import ProductItem from "./ProductItem";
 
+const apiKey = import.meta.env.VITE_BASE_URL;
+
 const Products = () => {
   const [productData, setProductData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://shop.orient.at/sermobileboss/get_products")
+      .get(`${apiKey}/get_products`)
       .then((response) => {
         const data = response.data.data;
         setProductData(data);

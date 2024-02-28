@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import axios from "redaxios";
 import ProductItem from "../components/ProductItem";
 
+const apiKey = import.meta.env.VITE_BASE_URL;
+
 const Category = () => {
   let { category_id } = useParams();
   console.log("categoryid", category_id);
@@ -13,11 +15,9 @@ const Category = () => {
   };
   useEffect(() => {
     axios
-      .post(
-        `https://shop.orient.at/sermobileboss/get_products/search`,
-        categoryId,
-        { headers: { "Content-Type": "multipart/form-data" } }
-      )
+      .post(`${apiKey}/get_products/search`, categoryId, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
       .then((response) => {
         const data = response.data.data;
         setCategoryData(data);
