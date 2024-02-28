@@ -6,13 +6,15 @@ import { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
 import { Link } from "react-router-dom";
 
+const apiKey = import.meta.env.VITE_BASE_URL;
+
 const SearchBar = () => {
   const [productData, setProductData] = useState([]);
   const [searchData, setSearchData] = useState("");
   console.log("searchData", searchData);
   useEffect(() => {
     axios
-      .get("https://shop.orient.at/sermobileboss/get_products")
+      .get(`${apiKey}/get_products`)
       .then((response) => {
         const data = response.data.data;
         setProductData(data);
